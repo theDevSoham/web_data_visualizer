@@ -1,5 +1,6 @@
 <h1>Data Visualizer</h1>
 <hr><p>The following project is a browser app that lets the user visualize data by plotting it against charts</p><h2>General Information</h2>
+<h2>The app is deployed at: [deployed link] (https://visualizerdata.netlify.app) </h2>
 <hr><ul>
 <li>This demo uses WineData.json as a reference to plot it on Echarts - An open source javascript visualization library</li>
 </ul><ul>
