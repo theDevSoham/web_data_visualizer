@@ -17,7 +17,7 @@ const getChart1Data = (): ChartDataType => {
 
     return item.Ash
   })
-  return { horizontal: flavanoids, vertical: ash }
+  return { horizontal: flavanoids, vertical: ash, nameX: 'Flavanoids', nameY: 'Ash' }
 }
 
 const getChart2Data = (): ChartDataType => {
@@ -35,7 +35,7 @@ const getChart2Data = (): ChartDataType => {
 
     return item.Magnesium
   })
-  return { horizontal: alcohol, vertical: magnesium }
+  return { horizontal: alcohol, vertical: magnesium, nameX: 'Alcohol', nameY: 'Magnesium' }
 }
 
 export { getChart1Data, getChart2Data }

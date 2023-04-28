@@ -51,46 +51,57 @@ const ChartDisplay: React.FC<ChartPropTypes> = (props) => {
         ...currentOption,
         title: {
           ...currentOption.title,
-          text: `Chart ${props.currentChart}`
+          text: `Chart ${props.currentChart}`,
+          padding: 0
         },
         legend: {
           ...currentOption.legend,
-          data: [
-            `Chart ${props.currentChart} - Line`,
-            `Chart ${props.currentChart} - Bar`,
-            `Chart ${props.currentChart} - Area`
-          ]
+          show: false
         },
         xAxis: {
           ...currentOption.xAxis,
-          data: props.chartData.horizontal
-        },
-        series: [
-          {
-            ...currentOption.series[0],
-            name: `Chart ${props.currentChart} - Line`,
-            type: 'line',
-            smooth: true,
-            areaStyle: undefined,
-            data: props.chartData.vertical
-          },
-          {
-            ...currentOption.series[0],
-            name: `Chart ${props.currentChart} - Bar`,
-            type: 'bar',
-            smooth: false,
-            areaStyle: undefined,
-            data: props.chartData.vertical
-          },
-          {
-            ...currentOption.series[0],
-            name: `Chart ${props.currentChart} - Area`,
-            type: 'line',
-            smooth: true,
-            areaStyle: { normal: {} },
-            data: props.chartData.vertical
+          data: props.chartData.horizontal,
+          name: props.chartData.nameX,
+          nameGap: 10,
+          nameLocation: 'end',
+          nameTextStyle: {
+            fontSize: 20,
+            fontWeight: 'bold',
+            align: 'center'
           }
-        ]
+        },
+        yAxis: {
+          ...currentOption.yAxis,
+          name: props.chartData.nameY,
+          nameGap: 20,
+          nameLocation: 'end',
+          nameTextStyle: {
+            fontSize: 20,
+            fontWeight: 'bold',
+            align: 'center'
+          }
+        },
+        series: props.currentChart === 1
+          ? [
+              {
+                ...currentOption.series[0],
+                name: `${props.chartData.nameY} - Line`,
+                type: 'line',
+                smooth: true,
+                areaStyle: undefined,
+                data: props.chartData.vertical
+              }
+            ]
+          : [
+              {
+                ...currentOption.series[0],
+                name: `${props.chartData.nameY} - Bar`,
+                type: 'bar',
+                smooth: true,
+                areaStyle: undefined,
+                data: props.chartData.vertical
+              }
+            ]
       }
     })
   }, [props.chartData, props.currentChart])

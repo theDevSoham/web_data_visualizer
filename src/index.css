@@ -101,6 +101,11 @@ button:hover {
     color: #fff;
 }
 
+.text-md {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
 .font-bold {
     font-weight: 700;
 }
@@ -141,5 +146,109 @@ button:hover {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+
+/* Media queries */
+
+
+/* iPhone 5 */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    .ip5_h-1\/2 {
+        height: 50%;
+    }
+    .ip5_text-3xl {
+        font-size: 1.4rem;
+    }
+    .ip5_py-4 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .ip5_px-8 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .ip5_text-md {
+        font-size: 1rem;
+    }
+}
+
+
+/* iPhone X */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .ipx_h-6\/10 {
+        height: 60%;
+    }
+    .ipx_h-4\/10 {
+        height: 40%;
+    }
+    .ipx_text-3xl {
+        font-size: 1.6rem;
+    }
+    .ipx_py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .ipx_px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .ipx_text-md {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* iPad */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .ipD_h-6\/10 {
+        height: 60%;
+    }
+    .ipD_h-4\/10 {
+        height: 40%;
+    }
+    .ipD_text-5xl {
+        font-size: 3rem;
+    }
+    .ipD_py-4 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .ipD_px-8 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .ipD_text-md {
+        font-size: 2rem;
+    }
+}
+
+
+/* iPad Pro */
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+    .ipDP_h-7\/10 {
+        height: 70%;
+    }
+    .ipDP_h-3\/10 {
+        height: 30%;
+    }
+    .ipDP_text-5xl {
+        font-size: 5rem;
+    }
+    .ipDP_py-4 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .ipDP_px-8 {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .ipDP_text-md {
+        font-size: 3rem;
     }
 }

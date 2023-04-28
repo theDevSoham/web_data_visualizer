@@ -28,15 +28,15 @@ const Body: React.FC = () => {
   // return statement
   return (
     <section className="w-full h-8/10 flex flex-col justify-center items-center">
-      <div className="w-full h-8/10 px-4">
+      <div className="w-full h-8/10 px-4 ip5_h-1/2 ipx_h-6/10 ipD_h-6/10 ipDP_h-7/10">
         {<ChartDisplay chartData={currentChartData} currentChart={chartNum} />}
       </div>
-      <div className="w-full h-2/10 flex justify-center items-center">
+      <div className="w-full h-2/10 flex justify-center items-center ip5_h-1/2 ipx_h-4/10 ipD_h-4/10 ipDP_h-3/10">
         <button
-          className="bg-blue-700 text-white font-bold py-4 px-8 rounded"
+          className="bg-blue-700 text-white font-bold py-4 px-8 rounded ip5_py-4 ip5_px-8 ipx_py-4 ipx_px-8 ipD_py-4 ipD_px-8 ipDP_py-4 ipDP_px-8"
           onClick={updateChart}
         >
-          Show Chart {chartNum === 1 ? 2 : 1}
+          <span className='text-md ip5_text-md ipx_text-md ipD_text-md ipDP_text-md'>Show Chart {chartNum === 1 ? 2 : 1}</span>
         </button>
       </div>
     </section>

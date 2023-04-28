@@ -1,6 +1,8 @@
 interface ChartDataType {
   horizontal: number[]
   vertical: number[]
+  nameX: string
+  nameY: string
 }
 
 interface SeriesType {
@@ -23,6 +25,7 @@ interface OptionType {
   legend: {
     data: string[]
     padding: number | string
+    show?: boolean
   }
   toolbox: {
     feature: {
@@ -42,12 +45,29 @@ interface OptionType {
       name?: string
       nameLocation?: 'start' | 'center' | 'middle' | 'end'
       nameGap?: number
+      nameTextStyle?: {
+        fontStyle?: 'normal' | 'italic' | 'oblique'
+        fontWeight?: 'normal' | 'bold' | 'bolder' | 'lighter' | number
+        fontFamily?: 'sans-serif' | 'serif' | 'monospace'
+        fontSize?: number
+        align?: 'left' | 'center' | 'right'
+      }
       data: number[] | string[]
     }
   ]
   yAxis: [
     {
       type: 'value'
+      name?: string
+      nameLocation?: 'start' | 'center' | 'middle' | 'end'
+      nameGap?: number
+      nameTextStyle?: {
+        fontStyle?: 'normal' | 'italic' | 'oblique'
+        fontWeight?: 'normal' | 'bold' | 'bolder' | 'lighter' | number
+        fontFamily?: 'sans-serif' | 'serif' | 'monospace'
+        fontSize?: number
+        align?: 'left' | 'center' | 'right'
+      }
     }
   ]
   series: SeriesType[]
