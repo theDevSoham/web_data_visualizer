@@ -7,7 +7,8 @@ const option = {
     trigger: 'axis'
   },
   legend: {
-    data: ['a', 'b', 'c']
+    data: ['a', 'b', 'c'],
+    padding: 20
   },
   toolbox: {
     feature: {
@@ -37,7 +38,7 @@ const option = {
   ],
   series: [
     {
-      name: 'q',
+      name: 'a',
       type: 'line',
       stack: 'x',
       smooth: true,
@@ -45,7 +46,7 @@ const option = {
       data: [120, 132, 101, 134, 90, 230, 210]
     },
     {
-      name: 'w',
+      name: 'b',
       type: 'line',
       stack: 'x',
       smooth: true,
@@ -53,7 +54,7 @@ const option = {
       data: [220, 182, 191, 234, 290, 330, 310]
     },
     {
-      name: 'r',
+      name: 'c',
       type: 'line',
       stack: 'x',
       smooth: true,

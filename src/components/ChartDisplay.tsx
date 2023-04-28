@@ -20,6 +20,7 @@ import {
 
 // importing default canvas renderer
 import { CanvasRenderer } from 'echarts/renderers'
+import { type ChartDataType } from '../interfaces/interface'
 
 // Register the required components
 echarts.use([
@@ -33,7 +34,13 @@ echarts.use([
   ToolboxComponent
 ])
 
-const Chart1: React.FC = () => {
+// local prop type declaration
+
+interface ChartPropTypes {
+  chartData: ChartDataType
+}
+
+const ChartDisplay: React.FC<ChartPropTypes> = (props) => {
   return (
     <ReactEChartsCore
       echarts={echarts}
@@ -47,4 +54,4 @@ const Chart1: React.FC = () => {
   )
 }
 
-export default Chart1
+export default ChartDisplay
