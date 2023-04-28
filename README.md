@@ -1,46 +1,49 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h1>Data Visualizer</h1>
+<hr><p>The following project is a browser app that lets the user visualize data by plotting it against charts</p><h2>General Information</h2>
+<hr><ul>
+<li>This demo uses WineData.json as a reference to plot it on Echarts - An open source javascript visualization library</li>
+</ul><ul>
+<li>The app renders two charts. One plots a Line graph for Flavanoids vs Ash data and the 2nd one plots Bar graph against Alcohol vs minimum Magnesium. To calculate minimum Magnesium from the raw data Math.floor() function is used.</li>
+</ul><ul>
+<li>The project serves as a recruitment assignment for Manufac Analytics Private Limited. This project does not accept contributions.</li>
+</ul><h2>Technologies Used</h2>
+<hr><ul>
+<li>HTML</li>
+</ul><ul>
+<li>CSS</li>
+</ul><ul>
+<li>React</li>
+</ul><ul>
+<li>Typescript</li>
+</ul><ul>
+<li>Yarn</li>
+</ul><ul>
+<li>Apache Echarts</li>
+</ul><h2>Features</h2>
+<hr><ul>
+<li>This is a single page application without complex routing and no react routers are there</li>
+</ul><ul>
+<li>The App lazily loads the chunk of heavy graphical calculations so a lazy loader is implemented at the root.</li>
+</ul><ul>
+<li>The user interface has a button that lets him/her to toggle through 1st and 2nd chart. This is implemented because rendering 2 charts at the same time was causing responsiveness issues.</li>
+</ul><ul>
+<li>Basic CSS is used for the app. No tailwind CSS is used. This is mention worthy as the tailwind class naming reference is followed. There's no tailwind css implemented on the app only the class naming signature might look so</li>
+</ul><ul>
+<li>The app supports typescript. So lot of stuff like interfaces and static data are present in the 'src' directory. These files have comments describing their purpose and details. Any file/directory that might look different from the template should have a description in comments.</li>
+</ul><ul>
+<li>Any unused code or file have been removed permanently. However it's mention worthy that the public directory haven't been touched</li>
+</ul><h2>Screenshots</h2>
+<hr><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%201.png" alt=""></p><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%202.png" alt=""></p><h2>Setup</h2>
+<hr><p>Basic requirements for the setup:</p>
+<ol>
+<li>yarn installed on the device</li>
+<li>node js installed on the device</li>
+</ol><h5>Steps</h5><ul>
+<li>Clone the repository into a device that meets the basic requirements.</li>
+</ul><ul>
+<li>Before running yarn start, the user must run yarn command first. This will install the packages from package.json</li>
+</ul><ul>
+<li>Beware of running npm. Npm will also work though package-lock.json and yarn-lock.json might conflict.</li>
+</ul><ul>
+<li>Finally run yarn start to start the app on localhost:3000</li>
+</ul>
