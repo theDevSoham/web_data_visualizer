@@ -1,3 +1,8 @@
+/* 
+    *The following classes are named with referrence to tailwind classes 
+    *and are used to style the components in the app
+*/
+
 *,
 *::before,
 *::after {
@@ -150,10 +155,10 @@ button:hover {
 }
 
 
-/* Media queries */
+/* *Media queries */
 
 
-/* iPhone 5 */
+/* *iPhone 5 */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
     .ip5_h-1\/2 {
@@ -176,7 +181,7 @@ button:hover {
 }
 
 
-/* iPhone X */
+/* *iPhone X */
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
     .ipx_h-6\/10 {
@@ -202,7 +207,7 @@ button:hover {
 }
 
 
-/* iPad */
+/* *iPad */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     .ipD_h-6\/10 {
@@ -228,7 +233,7 @@ button:hover {
 }
 
 
-/* iPad Pro */
+/* *iPad Pro */
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
     .ipDP_h-7\/10 {

@@ -1,3 +1,8 @@
+/*
+ *Purpose: This file stores initial values of any stateful variables, such as options for charts, etc.
+ *This file is used to store the initial values of the options for the charts.
+ */
+
 import type { OptionType } from '../interfaces/interface'
 
 const option: OptionType = {

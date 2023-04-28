@@ -1,3 +1,8 @@
+/*
+ *Purpose: Stores and emits the data type and required interfaces of the chart
+ *This file is used to store the data type and required interfaces of the chart.
+ */
+
 interface ChartDataType {
   horizontal: number[]
   vertical: number[]
