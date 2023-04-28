@@ -1,4 +1,6 @@
-const option = {
+import type { OptionType } from '../interfaces/interface'
+
+const option: OptionType = {
   title: {
     text: 'Trial',
     padding: 20
@@ -28,7 +30,7 @@ const option = {
       name: 'x-axis',
       nameLocation: 'center',
       nameGap: 30,
-      data: ['x', 'c', 'v', 'y', 'z', 'n', 'l']
+      data: [0, 1, 2, 3, 4, 5, 6]
     }
   ],
   yAxis: [

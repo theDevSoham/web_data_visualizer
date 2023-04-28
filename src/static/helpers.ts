@@ -20,4 +20,22 @@ const getChart1Data = (): ChartDataType => {
   return { horizontal: flavanoids, vertical: ash }
 }
 
-export { getChart1Data }
+const getChart2Data = (): ChartDataType => {
+  const alcohol = data.map((item) => {
+    if (typeof item.Alcohol === 'string') {
+      return parseFloat(item.Alcohol)
+    }
+
+    return item.Alcohol
+  })
+  const magnesium = data.map((item) => {
+    if (typeof item.Magnesium === 'string') {
+      return parseFloat(item.Magnesium)
+    }
+
+    return item.Magnesium
+  })
+  return { horizontal: alcohol, vertical: magnesium }
+}
+
+export { getChart1Data, getChart2Data }

@@ -20,7 +20,7 @@ import {
 
 // importing default canvas renderer
 import { CanvasRenderer } from 'echarts/renderers'
-import { type ChartDataType } from '../interfaces/interface'
+import type { OptionType, ChartDataType } from '../interfaces/interface'
 
 // Register the required components
 echarts.use([
@@ -38,13 +38,66 @@ echarts.use([
 
 interface ChartPropTypes {
   chartData: ChartDataType
+  currentChart: number
 }
 
 const ChartDisplay: React.FC<ChartPropTypes> = (props) => {
+  const [currentOption, setCurrentOption] = React.useState<OptionType>(option)
+
+  // useEffect hook
+  React.useEffect(() => {
+    setCurrentOption((currentOption) => {
+      return {
+        ...currentOption,
+        title: {
+          ...currentOption.title,
+          text: `Chart ${props.currentChart}`
+        },
+        legend: {
+          ...currentOption.legend,
+          data: [
+            `Chart ${props.currentChart} - Line`,
+            `Chart ${props.currentChart} - Bar`,
+            `Chart ${props.currentChart} - Area`
+          ]
+        },
+        xAxis: {
+          ...currentOption.xAxis,
+          data: props.chartData.horizontal
+        },
+        series: [
+          {
+            ...currentOption.series[0],
+            name: `Chart ${props.currentChart} - Line`,
+            type: 'line',
+            smooth: true,
+            areaStyle: undefined,
+            data: props.chartData.vertical
+          },
+          {
+            ...currentOption.series[0],
+            name: `Chart ${props.currentChart} - Bar`,
+            type: 'bar',
+            smooth: false,
+            areaStyle: undefined,
+            data: props.chartData.vertical
+          },
+          {
+            ...currentOption.series[0],
+            name: `Chart ${props.currentChart} - Area`,
+            type: 'line',
+            smooth: true,
+            areaStyle: { normal: {} },
+            data: props.chartData.vertical
+          }
+        ]
+      }
+    })
+  }, [props.chartData, props.currentChart])
   return (
     <ReactEChartsCore
       echarts={echarts}
-      option={option}
+      option={currentOption}
       notMerge={true}
       lazyUpdate={true}
       theme={'dark'}
