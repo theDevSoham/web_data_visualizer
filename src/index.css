@@ -1,6 +1,12 @@
 /* 
     *The following classes are named with referrence to tailwind classes 
     *and are used to style the components in the app
+    *These classes are not fully responsive so a different set of responsive classes are used for mobile devices
+    *Responsiveness for the following devices are supported:
+        *iPhone 5
+        *iPhone X
+        *iPad
+        *iPad Pro
 */
 
 *,
