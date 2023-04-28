@@ -19,7 +19,7 @@
 <li>Yarn</li>
 </ul><ul>
 <li>Apache Echarts</li>
-</ul><h2>Features</h2>
+</ul><h2>Basic Technical Summary</h2>
 <hr><ul>
 <li>This is a single page application without complex routing and no react routers are there</li>
 </ul><ul>
