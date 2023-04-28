@@ -13,6 +13,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.p-4 {
+    padding: 1rem;
+}
+
 .w-full {
     width: 100%;
 }
@@ -54,6 +58,14 @@ body {
     height: 80%;
 }
 
+.w-1\/2 {
+    width: 50%;
+}
+
+.h-1\/2 {
+    height: 50%;
+}
+
 .flex {
     display: flex;
 }
@@ -68,6 +80,48 @@ body {
 
 .items-center {
     align-items: center;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    opacity: 0.8;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.bg-blue-700 {
+    background-color: rgb(29 78 216);
+}
+
+.text-white {
+    color: #fff;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.rounded {
+    border-radius: 0.25rem;
 }
 
 .loader {
