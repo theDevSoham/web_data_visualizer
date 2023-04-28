@@ -19,6 +19,8 @@
 <li>Yarn</li>
 </ul><ul>
 <li>Apache Echarts</li>
+</ul><ul>
+<li>ESLint</li>
 </ul><h2>Basic Technical Summary</h2>
 <hr><ul>
 <li>This is a single page application without complex routing and no react routers are there</li>
@@ -32,12 +34,15 @@
 <li>The app supports typescript. So lot of stuff like interfaces and static data are present in the 'src' directory. These files have comments describing their purpose and details. Any file/directory that might look different from the template should have a description in comments.</li>
 </ul><ul>
 <li>Any unused code or file have been removed permanently. However it's mention worthy that the public directory haven't been touched</li>
+</ul><ul>
+<li>ESLint is used for code formatting. It is advised to install ESLint and Prettier in VSCode before installing the packages</li>
 </ul><h2>Screenshots</h2>
 <hr><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%201.png" alt=""></p><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%203.png" alt=""></p><h2>Setup</h2>
 <hr><p>Basic requirements for the setup:</p>
 <ol>
 <li>yarn installed on the device</li>
 <li>node js installed on the device</li>
+<li>ESLint and Prettier is a must as the project uses linting</li>
 </ol><h5>Steps</h5><ul>
 <li>Clone the repository into a device that meets the basic requirements.</li>
 </ul><ul>
