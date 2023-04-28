@@ -1,6 +1,5 @@
 <h1>Data Visualizer</h1>
 <hr><p>The following project is a browser app that lets the user visualize data by plotting it against charts</p><h2>General Information</h2>
-<h2>The app is deployed at: https://visualizerdata.netlify.app</h2>
 <hr><ul>
 <li>This demo uses WineData.json as a reference to plot it on Echarts - An open source javascript visualization library</li>
 </ul><ul>
@@ -52,4 +51,5 @@
 <li>Beware of running npm. Npm will also work though package-lock.json and yarn-lock.json might conflict.</li>
 </ul><ul>
 <li>Finally run yarn start to start the app on localhost:3000</li>
-</ul>
+</ul><h2>Deployed Link</h2>
+<h3>The app is deployed at: https://visualizerdata.netlify.app</h3>
