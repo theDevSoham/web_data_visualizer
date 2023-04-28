@@ -33,7 +33,7 @@
 </ul><ul>
 <li>Any unused code or file have been removed permanently. However it's mention worthy that the public directory haven't been touched</li>
 </ul><h2>Screenshots</h2>
-<hr><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%201.png" alt=""></p><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%202.png" alt=""></p><h2>Setup</h2>
+<hr><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%201.png" alt=""></p><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%203.png" alt=""></p><h2>Setup</h2>
 <hr><p>Basic requirements for the setup:</p>
 <ol>
 <li>yarn installed on the device</li>
