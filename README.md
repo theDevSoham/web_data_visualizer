@@ -37,7 +37,7 @@
 </ul><ul>
 <li>ESLint is used for code formatting. It is advised to install ESLint and Prettier in VSCode before installing the packages</li>
 </ul><h2>Screenshots</h2>
-<hr><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%201.png" alt=""></p><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%203.png" alt=""></p><h2>Setup</h2>
+<hr><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart%201.png" alt=""></p><p><img src="https://github.com/theDevSoham/web_data_visualizer/blob/main/src/assets/images/Chart_rectify.png" alt=""></p><h2>Setup</h2>
 <hr><p>Basic requirements for the setup:</p>
 <ol>
 <li>yarn installed on the device</li>
