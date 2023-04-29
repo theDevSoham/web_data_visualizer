@@ -51,33 +51,82 @@ const getChart1Data = (): ChartDataType => {
  */
 const getChart2Data = (): ChartDataType => {
   /*
-   *logic to convert the string data to number for *minimum* Alcohol, if there is one, and return the data
+   *logic: get the collective data for Alcohol and Magnesium from all the data and return minimum magnesium for each alcohol data
    */
 
-  const alcohol = data.map((item) => {
-    if (typeof item.Alcohol === 'string') {
-      return parseFloat(item.Alcohol)
+  /*
+   * Get the collective data for Alcohol and Magnesium from all the data
+   */
+  const collectiveData = data.map((item) => {
+    return {
+      Alcohol:
+        typeof item.Alcohol === 'string'
+          ? parseFloat(item.Alcohol)
+          : item.Alcohol,
+      Magnesium:
+        typeof item.Magnesium === 'string'
+          ? parseFloat(item.Magnesium)
+          : item.Magnesium
     }
-
-    return item.Alcohol
   })
 
   /*
-   *logic to convert the string data to number for *minimum* Magnesium, if there is one, and return the data
+   * Get minimum magnesium for each alcohol data. Process: structureAlcoholMagnesiumData -> structures the alcohol and magnesium data as a key value pair => minifyData -> get the minimum magnesium for each alcohol data
    */
-  const magnesium = data.map((item) => {
-    if (typeof item.Magnesium === 'string') {
-      return Math.floor(parseFloat(item.Magnesium))
-    }
 
-    return Math.floor(item.Magnesium)
-  })
+  const processedData = minifyData(
+    structureAlcoholMagnesiumData(collectiveData)
+  )
+  const alcohol = Array.from(processedData.keys())
+  const magnesium = Array.from(processedData.values())
+
   return {
     horizontal: alcohol,
     vertical: magnesium,
     nameX: 'Alcohol',
     nameY: 'Magnesium'
   }
+}
+
+/*
+ *Function to structure data into a map with alcohol as key and magnesium as value
+ */
+
+const structureAlcoholMagnesiumData = (data: any): Map<number, number[]> => {
+  return data.reduce((acc: Map<number, number[]>, item: any) => {
+    const key = item.Alcohol
+    const value = item.Magnesium
+
+    if (acc.has(key)) {
+      const currentValues = acc.get(key) ?? []
+      acc.set(key, [...currentValues, value])
+    } else {
+      acc.set(key, [value])
+    }
+
+    return acc
+  }, new Map())
+}
+
+/*
+ *Function to get the minimum magnesium for each alcohol data
+ */
+const minifyData = (structured: Map<number, number[]>): Map<number, number> => {
+  const minified = new Map<number, number>()
+
+  structured.forEach((value, key) => {
+    minified.set(
+      key,
+      value.reduce((acc: number, item: number) => {
+        if (item < acc) {
+          acc = item
+        }
+        return acc
+      }, value[0])
+    )
+  })
+
+  return minified
 }
 
 export { getChart1Data, getChart2Data }
