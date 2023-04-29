@@ -51,4 +51,5 @@
 <li>Beware of running npm. Npm will also work though package-lock.json and yarn-lock.json might conflict.</li>
 </ul><ul>
 <li>Finally run yarn start to start the app on localhost:3000</li>
-</ul>
+</ul><h2>Deployed Link</h2>
+<h3>The app is deployed at: https://visualizerdata.netlify.app</h3>
